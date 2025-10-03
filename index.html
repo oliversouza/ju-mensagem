@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=7" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Mensagem para Ju</title>
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+        <style>
+            body {
+                margin: 0;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: url("https://images.unsplash.com/photo-1529676468690-038d4734c3a5?auto=format&fit=crop&w=1470&q=80")
+                    no-repeat center center/cover;
+                font-family: "Georgia", serif;
+                color: #fff;
+                text-align: center;
+                padding: 20px;
+                background-attachment: fixed;
+            }
+            .container {
+                background: rgba(255, 192, 203, 0.7);
+                padding: 30px;
+                border-radius: 20px;
+                max-width: 800px;
+                box-shadow: 0px 0px 25px rgba(255, 182, 193, 0.8);
+            }
+            h1 {
+                font-size: 2rem;
+                margin-bottom: 20px;
+                color: #ff8c94;
+            }
+            #typed {
+                font-size: 1.2rem;
+                line-height: 1.8;
+                white-space: pre-wrap;
+                color: #6d3d4d;
+            }
+            @media (max-width: 600px) {
+                .container {
+                    padding: 15px;
+                    border-radius: 10px;
+                    max-width: 98vw;
+                }
+                h1 {
+                    font-size: 1.3rem;
+                }
+                #typed {
+                    font-size: 1rem;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>🌸 Para Ju 🌸</h1>
+            <div id="typed"></div>
+        </div>
+
+        <!-- Música de fundo -->
+        <audio
+            id="bg-music"
+            src="https://www.bensound.com/bensound-music/bensound-tenderness.mp3"
+            loop
+        ></audio>
+
+        <script>
+            const mensagem = `
+Neste momento tão especial da sua vida, não poderíamos deixar de expressar todo o nosso carinho, admiração e alegria por acompanhar esse capítulo tão lindo da sua história.
+Sabemos o quanto o casamento é uma união abençoada e sagrada, e não temos dúvidas de que, com a sua fé inabalável e seu amor ao próximo, essa nova fase será repleta de luz, harmonia e realizações.
+Você é uma mulher que inspira não só pelo profissionalismo e responsabilidade, mas principalmente pela humanidade, empatia e respeito com que trata todos ao seu redor. Seu carisma é um presente para quem tem o privilégio de conviver com você e é uma honra poder celebrar esse momento ao seu lado.
+Que Deus continue abençoando sua caminhada, agora também junto com Felipe seu companheiro de vida, fortalecendo esse amor com sabedoria, paciência e cumplicidade.
+Receba o nosso abraço mais caloroso e os votos de uma vida a dois cheia de paz, amor e felicidade!
+Com carinho,
+Sua equipe Financeiro e Administrativo, (seus filhos rsrs).`;
+
+            // Efeito de digitação
+            new Typed("#typed", {
+                strings: [mensagem],
+                typeSpeed: 40,
+                backSpeed: 0,
+                showCursor: false,
+            });
+            // Música de fundo com volume baixo
+            window.onload = function() {
+                const musica = document.getElementById("bg-music");
+                musica.volume = 0.15;
+                musica.play();
+            }
+        </script>
+    </body>
+</html>
